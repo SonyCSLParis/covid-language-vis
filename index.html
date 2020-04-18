@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<title>COVID PRELIMINARY REPORT BY SONY CSL - PARIS</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src="https://www.w3schools.com/lib/w3.js"></script>
+<script src="http://www.w3schools.com/lib/w3data.js"></script>
+<style>
+html,body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
+hr {margin: 5px;}
+</style>
+<head>
+  <link rel="icon" href="favicon.ico" sizes="16x16">
+    <!--#include file="footer_text.html" -->
+    <script>
+  function resizeIframe(obj) {
+    obj.style.height = obj.contentWindow.document.documentElement.scrollHeight + 'px';
+  }
+  </script>
+</head>
+<body class="w3-light-grey">
+
+<!-- Top container
+-->
+<div class="w3-bar w3-top w3-black w3-large" style="z-index:4">
+  <button class="w3-bar-item w3-button w3-hide-large w3-hover-none w3-hover-text-light-grey" onclick="w3_open();"><i class="fa fa-bars"></i>  Menu</button>
+  <a href="#tweets" class="w3-bar-item w3-button w3-right w3-padding">Tweets</a>
+  <a href="#news" class="w3-bar-item w3-button w3-right w3-padding">News</a>
+  <a href="https://sonycslparis.github.io/COVID-INFO/" class="w3-bar-item w3-button w3-right w3-padding">InfoDyn</a>
+
+</div>
+<!-- Sidebar/menu -->
+<nav class="w3-sidebar w3-collapse w3-white w3-animate-left" style="z-index:3;width:300px;" id="mySidebar"><br>
+  <div class="w3-container w3-row">
+      <a href="https://sonycslparis.github.io/COVID-INFO/">
+        <img src="https://csl.sony.fr/wp-content/themes/sony/images/logo.png" style="width: 90%">
+      </a>
+  </div>
+  <div class="w3-container w3-padding-16">
+     <i style="font-size: .9em;">A preliminary and work in progress report about Information Dynamics in the COVID-19 emergency by <a href="https://csl.sony.fr/">Sony Computer Science Labs, Paris</a>, as member of the AGCOM Task Force against disinformation on COVID-19. </i>
+  </div>
+  <div class="w3-container w3-bar-block">
+    <h5>Contents:</h5>
+    <a href="#time" class="w3-bar-item w3-button w3-padding"><i class="fa fa-search fa-fw"></i>  Searches in Time </a>
+    <a href="#map" class="w3-bar-item w3-button w3-padding"><i class="fa fa-map fa-fw"></i>  The Map of Searches</a>
+    <a href="#rank" class="w3-bar-item w3-button w3-padding"><i class="fa fa-list-ol fa-fw"></i>  Ranks of Searches</a>
+  </div>
+  <hr>
+  <div class="w3-container">
+    <h5>Authors:</h5>
+    <a href="https://csl.sony.fr/team/michael-anslow/">Michael Anslow</a><br>
+    <a href="https://csl.sony.fr/team/martina-galletti/">Martina Galetti </a><br>
+    <a href="https://csl.sony.fr/team/dr-annette-werth/">Annette Werth </a><br>
+  </div>
+ <hr>
+  <div class="w3-container w3-bar-block">
+  <h5>Credits:</h5>
+  <span class=""> Searches data have been gathered from <a href="https://trends.google.com"> Google Trends </a> throught the <a href="https://github.com/GeneralMills/pytrends">pytrends</a> Python library;</span><br>
+  <span class=""> Interventions data come from <a href="http://covid19-interventions.com/">this repository</a>, by Complexity Science Hub Vienna;</span>
+</div>
+<hr>
+<br>
+<hr>
+<br>
+<hr>
+</nav>
+
+
+<!-- Overlay effect when opening sidebar on small screens -->
+<div class="w3-overlay w3-hide-large w3-animate-opacity" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+
+<!-- !PAGE CONTENT! -->
+<div class="w3-main" style="margin-left:300px;margin-top:43px;">
+
+  <!-- Header -->
+  <header class="w3-container" style="padding-top:22px; text-align: center;">
+    <h1><b> <i class="fa fa-users fa-fw"></i> Regions</b> <i class="fa fa-search fa-fw"></i></h1>
+  </header>
+
+  <div class="w3-container">
+        <div w3-include-html="uk_word_cloud.html"></div>
+  <div class="w3-container">
+
+</div>
+
+<hr>
+
+
+  <!-- Footer -->
+
+
+  <!-- End page content -->
+</div>
+
+<script>
+// Get the Sidebar
+var mySidebar = document.getElementById("mySidebar");
+
+// Get the DIV with overlay effect
+var overlayBg = document.getElementById("myOverlay");
+
+// Toggle between showing and hiding the sidebar, and add overlay effect
+function w3_open() {
+  if (mySidebar.style.display === 'block') {
+    mySidebar.style.display = 'none';
+    overlayBg.style.display = "none";
+  } else {
+    mySidebar.style.display = 'block';
+    overlayBg.style.display = "block";
+  }
+}
+
+// Close the sidebar with the close button
+function w3_close() {
+  mySidebar.style.display = "none";
+  overlayBg.style.display = "none";
+}
+</script>
+
+</body>
+<script type="text/javascript">
+    w3IncludeHTML();
+</script>
+</html>
+
+
