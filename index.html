@@ -27,10 +27,10 @@ hr {margin: 5px;}
 -->
 <div class="w3-bar w3-top w3-black w3-large" style="z-index:4">
   <button class="w3-bar-item w3-button w3-hide-large w3-hover-none w3-hover-text-light-grey" onclick="w3_open();"><i class="fa fa-bars"></i>  Menu</button>
-  <a href="#tweets" class="w3-bar-item w3-button w3-right w3-padding">Tweets</a>
+  <a href="#tweets-dtm" class="w3-bar-item w3-button w3-right w3-padding">Topics</a>
+    <a href="#tweets-wordcloud" class="w3-bar-item w3-button w3-right w3-padding">Word Cloud</a>
   <a href="#news" class="w3-bar-item w3-button w3-right w3-padding">News</a>
-  <a href="https://sonycslparis.github.io/COVID-INFO/" class="w3-bar-item w3-button w3-right w3-padding">InfoDyn</a>
-
+  <a href="#about" class="w3-bar-item w3-button w3-right w3-padding">About</a>
 </div>
 <!-- Sidebar/menu -->
 <nav class="w3-sidebar w3-collapse w3-white w3-animate-left" style="z-index:3;width:300px;" id="mySidebar"><br>
@@ -71,7 +71,53 @@ hr {margin: 5px;}
 
 <!-- Overlay effect when opening sidebar on small screens -->
 <div class="w3-overlay w3-hide-large w3-animate-opacity" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+<script>
+    <!-- Every time a navigation button is clicked the hash parameter changes in the url and this is used to change the content of the page.    -->
 
+    function change_content(){
+        hash = window.location.hash.substr(1);
+          if(hash === 'tweets-dtm'){
+             document.getElementById('content').innerHTML = ' ' +
+                 '<div class="w3-container">\n' +
+                 '        <div w3-include-html="dtm.html"></div>' +
+                     '</div">\n';
+          }else if(hash === 'tweets-wordcloud'){
+            document.getElementById('content').innerHTML = '' +
+                 '<div class="w3-container">\n' +
+                 '        <div w3-include-html="word_clouds.html"></div>' +
+                 '</div">\n';
+            }else if(hash === 'news-it'){
+                document.getElementById('content').innerHTML = '' +
+                 '<div class="w3-container">\n' +
+                 '        <div w3-include-html="news-it.html"></div>' +
+                 '</div">\n';
+
+          }else if(hash === 'about'){
+                document.getElementById('content').innerHTML = '' +
+                 '<div class="w3-container">\n' +
+                 '        <div w3-include-html="home.html"></div>' +
+                 '</div">\n';
+
+          }else if(hash === ''){
+        // load home page is not navigation clicked
+        document.getElementById('content').innerHTML = '' +
+         '<div class="w3-container">\n' +
+         '        <div w3-include-html="home.html"></div>' +
+         '</div">\n';
+      }
+
+
+          w3IncludeHTML();
+    }
+
+    window.addEventListener("hashchange", function () {
+        change_content()
+
+    });
+
+
+
+</script>
 <!-- !PAGE CONTENT! -->
 <div class="w3-main" style="margin-left:300px;margin-top:43px;">
 
@@ -80,12 +126,7 @@ hr {margin: 5px;}
     <h1><b> <i class="fa fa-users fa-fw"></i> Regions</b> <i class="fa fa-search fa-fw"></i></h1>
   </header>
 
-  <div class="w3-container">
-        <div w3-include-html="word_clouds.html"></div>
-  <div class="w3-container">
-      <div class="w3-container">
-        <div w3-include-html="dtm.html"></div>
-  <div class="w3-container">
+    <div id="content"></div>
 
 </div>
 
@@ -125,6 +166,7 @@ function w3_close() {
 
 </body>
 <script type="text/javascript">
+    change_content();
     w3IncludeHTML();
 </script>
 </html>
