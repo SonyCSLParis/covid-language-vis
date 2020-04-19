@@ -13,7 +13,7 @@ This way we can capture both the global words captured to all regions and the pe
 
 Here are the regional and temporal word clouds for the nations of the United Kingdom.
 
-<iframe src="./plots/uk_word_cloud.html" 
+<iframe src="./plots/word_clouds/uk_word_cloud.html" 
         frameborder="0"
         min-height="600px"
         width="100%"
@@ -25,7 +25,7 @@ Here are the regional and temporal word clouds for the nations of the United Kin
 Here are the regional and temporal word clouds for the north and south of italy. In the case of Italy, the north of Italy, in particular, Lombardy, was very badly affected by the coronavirus outbreak serving as a yardstick for the rest of the world about how terrible covid-19 can be and how it can completely overwhelm health service capacity.
 
 
-<iframe src="./plots/it_word_cloud.html" 
+<iframe src="./plots/word_clouds/it_word_cloud.html" 
         frameborder="0"
         min-height="600px"
         width="100%"

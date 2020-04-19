@@ -11,7 +11,7 @@ As the Corona virus propagated very quickly through the world, the topics of imp
 Here are the most significant topics from the UK tweets about Corona Virus. Not all topics have an obvious title to them that summarise them. Again topics are a collection of words that capture some concept that is not always easy to name.
 With each topic the most significant terms are shown beneath. 
 
-<iframe src="./plots/uk_dtm.html" 
+<iframe src="./plots/dtm/uk_dtm.html" 
         frameborder="0"
         height="1400px"
         width="100%"
