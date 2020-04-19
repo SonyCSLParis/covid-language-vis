@@ -27,9 +27,9 @@ hr {margin: 5px;}
 -->
 <div class="w3-bar w3-top w3-black w3-large" style="z-index:4">
   <button class="w3-bar-item w3-button w3-hide-large w3-hover-none w3-hover-text-light-grey" onclick="w3_open();"><i class="fa fa-bars"></i>  Menu</button>
-  <a href="#tweets-dtm" class="w3-bar-item w3-button w3-right w3-padding">Topics</a>
-    <a href="#tweets-wordcloud" class="w3-bar-item w3-button w3-right w3-padding">Word Cloud</a>
-  <a href="#news" class="w3-bar-item w3-button w3-right w3-padding">News</a>
+  <a href="#tweets-dtm" class="w3-bar-item w3-button w3-right w3-padding">Tweet Topics</a>
+    <a href="#tweets-wordcloud" class="w3-bar-item w3-button w3-right w3-padding">Tweet Word Cloud</a>
+  <a href="#news" class="w3-bar-item w3-button w3-right w3-padding">News Articles</a>
   <a href="#about" class="w3-bar-item w3-button w3-right w3-padding">About</a>
 </div>
 <!-- Sidebar/menu -->
@@ -55,6 +55,11 @@ hr {margin: 5px;}
     <a href="https://csl.sony.fr/team/martina-galletti/">Martina Galetti </a><br>
     <a href="https://csl.sony.fr/team/dr-annette-werth/">Annette Werth </a><br>
   </div>
+    <div class="w3-container">
+    <h5>In tandem with:</h5>
+    <a href="https://csl.sony.fr/projects-creativity/">The Creativity Team@SonyCSL</a><br>
+  </div>
+
  <hr>
   <div class="w3-container w3-bar-block">
   <h5>Credits:</h5>
@@ -105,7 +110,6 @@ hr {margin: 5px;}
          '        <div w3-include-html="home.html"></div>' +
          '</div">\n';
       }
-
 
           w3IncludeHTML();
     }
