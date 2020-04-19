@@ -17,4 +17,15 @@ With each topic the most significant terms are shown beneath.
         width="100%"
         onload="resizeIframe(this)"
         ></iframe>
+   
+Looking more closely at the 'travel' topic we can see that initially starts with term 'flight' then 'cruise', 'ship' and 'japan' gain dominance, no doubt due to the coronva virus outbreak on the [diamond princess](https://en.wikipedia.org/wiki/Diamond_Princess_\(ship\)) cruise ship in Japan. 
+
+When this is no longer an issue the focus drifts back to 'travel', 'flight' and 'holiday' and 'ban'.
+  
+<iframe src="./plots/dtm/uk_dtm_travel.html" 
+        frameborder="0"
+        height="1400px"
+        width="100%"
+        onload="resizeIframe(this)"
+        ></iframe>
       
