@@ -1,0 +1,20 @@
+# Topic Modelling
+
+When investigating a large amount of data it's difficult to know where to start looking. Even though the Corona virus has affected practically everyone in the world in some way, we all experience it differently.
+
+One principled way of trying to identify what the fundamental topics are on twitter is called topic modelling. A topic is a collection of words that frequently occur together. For example "NHS", "worker", "staff" indicates something about peopel working for the NHS (the National Health Service (NHS) in the UK).
+
+As the Corona virus propagated very quickly through the world, the topics of importance changed over time. For example, Wuhan was the initial epicentre of the outbreak and this later became Italy. Being able to disentangle and track how topics change over time provides more powerful insight into activity on twitter.
+
+# United Kingdom
+
+Here are the most significant topics from the UK tweets about Corona Virus. Not all topics have an obvious title to them that summarise them. Again topics are a collection of words that capture some concept that is not always easy to name.
+With each topic the most significant terms are shown beneath. 
+
+<iframe src="./plots/uk_dtm.html" 
+        frameborder="0"
+        height="1400px"
+        width="100%"
+        onload="resizeIframe(this)"
+        ></iframe>
+      
